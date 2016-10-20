@@ -56,6 +56,8 @@
 		01D76D951DB8633200D93373 /* CallDirectoryHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallDirectoryHandler.h; sourceTree = "<group>"; };
 		01D76D961DB8633200D93373 /* CallDirectoryHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallDirectoryHandler.m; sourceTree = "<group>"; };
 		01D76D981DB8633200D93373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01D76DA01DB8AE5600D93373 /* calldemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = calldemo.entitlements; sourceTree = "<group>"; };
+		01D76DA11DB8AEE000D93373 /* CallDirectoryExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallDirectoryExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		01D76D771DB862B000D93373 /* calldemo */ = {
 			isa = PBXGroup;
 			children = (
+				01D76DA01DB8AE5600D93373 /* calldemo.entitlements */,
 				01D76D7B1DB862B000D93373 /* AppDelegate.h */,
 				01D76D7C1DB862B000D93373 /* AppDelegate.m */,
 				01D76D7E1DB862B000D93373 /* ViewController.h */,
@@ -121,6 +124,7 @@
 		01D76D941DB8633200D93373 /* CallDirectoryExtension */ = {
 			isa = PBXGroup;
 			children = (
+				01D76DA11DB8AEE000D93373 /* CallDirectoryExtension.entitlements */,
 				01D76D951DB8633200D93373 /* CallDirectoryHandler.h */,
 				01D76D961DB8633200D93373 /* CallDirectoryHandler.m */,
 				01D76D981DB8633200D93373 /* Info.plist */,
@@ -180,11 +184,21 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = KME7598E5L;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					01D76D921DB8633200D93373 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = KME7598E5L;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -370,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = calldemo/calldemo.entitlements;
 				DEVELOPMENT_TEAM = KME7598E5L;
 				INFOPLIST_FILE = calldemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -382,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = calldemo/calldemo.entitlements;
 				DEVELOPMENT_TEAM = KME7598E5L;
 				INFOPLIST_FILE = calldemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -394,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = CallDirectoryExtension/CallDirectoryExtension.entitlements;
 				DEVELOPMENT_TEAM = KME7598E5L;
 				INFOPLIST_FILE = CallDirectoryExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -407,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = CallDirectoryExtension/CallDirectoryExtension.entitlements;
 				DEVELOPMENT_TEAM = KME7598E5L;
 				INFOPLIST_FILE = CallDirectoryExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
